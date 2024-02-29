@@ -1,6 +1,7 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { FlashcardService } from './app/FlashcardService';
 
-bootstrapApplication(AppComponent, appConfig)
+bootstrapApplication(FlashcardService, appConfig)
   .catch((err) => console.error(err));
