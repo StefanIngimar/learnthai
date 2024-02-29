@@ -5,3 +5,4 @@ import { FlashcardService } from './app/FlashcardService';
 
 bootstrapApplication(FlashcardService, appConfig)
   .catch((err) => console.error(err));
+//just checking smth
