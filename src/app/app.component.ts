@@ -1,13 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FlashcardService } from './FlashcardService';
+import { Card } from './Card';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [CommonModule, RouterOutlet],
 })
-export class AppComponent {
-  title = 'thaiapp';
+export class AppComponent implements OnInit {
+  cards: Card[] = [];
+  constructor(private flashcardService: FlashcardService) {}
+
+  ngOnInit() {
+      this.cards = this.flashcardService.getCards();
+  }
 }
