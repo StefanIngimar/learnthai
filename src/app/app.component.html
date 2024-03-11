@@ -1,10 +1,10 @@
 <div class="container mt-3">
   <div class="row">
     <div class="col-sm-4" *ngFor="let card of cards">
-      <div class="card">
+      <div class="card text-white bg-primary mb-3">
+        <div class="card-header">{{ card.thaiCharacter }}</div>
         <div class="card-body">
-          <h5 class="card-title">{{ card.thaiCharacter }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{ card.name }}</h6>
+          <h5 class="card-title">{{ card.name }}</h5>
           <p class="card-text">{{ card.phonetic }}</p>
           <p class="card-text">{{ card.example }}</p>
         </div>
