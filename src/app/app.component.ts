@@ -13,9 +13,15 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   cards: Card[] = [];
+  flipState: boolean[] = [];
   constructor(private flashcardService: FlashcardService) {}
 
   ngOnInit() {
       this.cards = this.flashcardService.getCards();
+      this.flipState = new Array(this.cards.length).fill(false);
+  }
+
+  toggleFlip(index: number) {
+    this.flipState[index] = !this.flipState[index];
   }
 }

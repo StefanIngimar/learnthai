@@ -1,12 +1,20 @@
 <div class="container mt-3">
   <div class="row">
-    <div class="col-sm-4" *ngFor="let card of cards">
-      <div class="card text-white bg-primary mb-3">
-        <div class="card-header">{{ card.thaiCharacter }}</div>
-        <div class="card-body">
-          <h5 class="card-title">{{ card.name }}</h5>
-          <p class="card-text">{{ card.phonetic }}</p>
-          <p class="card-text">{{ card.example }}</p>
+    <div class="col-12 col-sm-6 col-md-3 mb-4" *ngFor="let card of cards; let i = index">
+      <div class="flip-card" (click)="toggleFlip(i)">
+        <div class="flip-card-inner" [class.flip]="flipState[i]">
+          <div class="flip-card-front text-white bg-primary">
+            <div class="card-header">{{ card.thaiCharacter }}</div>
+            <div class="card-body">
+              <h5 class="card-title">{{ card.name }}</h5>
+              <p class="card-text">{{ card.phonetic }}</p>
+            </div>
+          </div>
+          <div class="flip-card-back text-white bg-dark">
+            <div class="card-body">
+              <p class="card-text">{{ card.example }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
