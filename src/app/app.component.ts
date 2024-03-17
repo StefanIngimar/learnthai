@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent implements OnInit {
   cards: Card[] = [];
   flipState: boolean[] = [];
+  
   constructor(private flashcardService: FlashcardService) {}
 
   ngOnInit() {

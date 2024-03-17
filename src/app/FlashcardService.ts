@@ -13,7 +13,7 @@ export class FlashcardService {
     new Card("ฅ", "kho khon", "k", "ฅ คน (kho khon) – person"),
     new Card("ฆ", "kho rakhang", "k", "ฆ ระฆัง (kho rakhang) – bell"),
     new Card("ง", "ngo ngu", "ngo", "ง งู (ngo ngu) – snake"),
-    new Card("จ", "cho chan", "j", "จ จาน (cho chan) – plate"),
+    new Card("จ", "cho shan", "j", "จ จาน (cho chan) – plate"),
     new Card("ฉ", "cho ching", "ch", "ฉ ฉิ่ง (cho ching) – cymbals"),
     new Card("ช", "cho chang", "ch", "ช ช้าง (cho chang) – elephant"),
     new Card("ซ", "so so", "s", "ซ โซ่ (so so) – chain"),
