@@ -5,7 +5,7 @@ import { Card } from './Card';
   providedIn: 'root'
 })
 export class FlashcardService {
-  cards: Card[] = [
+  thaiAlphabet: Card[] = [
     new Card("ก", "ko kai", "k", "ก ไก่ (ko kai) – chicken"),
     new Card("ข", "kho khai", "kh", "ข ไข่ (kho khai) – egg"),
     new Card("ฃ", "kho khuat", "kh", "ฃ ขวด (kho khuat) – bottle"),
@@ -52,9 +52,83 @@ export class FlashcardService {
     new Card("ฮ", "ho nok huk", "h", "ฮ นกฮูก (ho nok huk) – owl"),
   ];
 
+  arabicAlphabet: Card[] = [
+    new Card("ا", "alif", "a", ""),
+    new Card("ب", "baa", "b", ""),
+    new Card("ت", "taa", "t", ""),
+    new Card("ث", "thaa", "th", ""),
+    new Card("ج", "jiim", "j/zh", ""),
+    new Card("ح", "haa", "soft h", ""),
+    new Card("خ", "khaa", "kh", ""),
+    new Card("د", "dal", "d", ""),
+    new Card("ذ", "dhal", "hard th", ""),
+    new Card("ر", "raa", "r", ""),
+    new Card("ز", "zay", "z", ""),
+    new Card("س", "siin", "s", ""),
+    new Card("ش", "sheen", "sh", ""),
+    new Card("ص", "saad", "ss", ""),
+    new Card("ض", "dhad", "soft d", ""),
+    new Card("ط", "taa", "t", ""),
+    new Card("ظ", "dhaa", "th", ""),
+    new Card("ع", "hain", "h", ""),
+    new Card("غ", "ghain", "gh", ""),
+    new Card("ف", "faa", "f", ""),
+    new Card("ق", "qaaf", "saying q but back from the throat", ""),
+    new Card("ك", "kaaf", "k", ""),
+    new Card("ل", "laam", "l", ""),
+    new Card("م", "miim", "m", ""),
+    new Card("ن", "nun", "n", ""),
+    new Card("ه", "haa", "h", ""),
+    new Card("و", "waw", "w/oo as in boot", ""),
+    new Card("ي", "yaa", "y/ee as in meet", ""),
+  ];
+
+  cyrillicAlphabet: Card[] = [
+    new Card("А а", "A", "", ""),
+    new Card("Б б", "B", "", ""),
+    new Card("В в", "Ve", "", ""),
+    new Card("Г г", "Ge", "", ""),
+    new Card("Д д", "De", "", ""),
+    new Card("Е е", "E, Je, Ye", "", ""),
+    new Card("Ë ë", "Jo, Yo", "", ""),
+    new Card("Ж ж", "Zhe", "", ""),
+    new Card("З з", "Ze", "", ""),
+    new Card("И и", "I", "", ""),
+    new Card("Й й", "J", "", ""),
+    new Card("К к", "Ka", "", ""),
+    new Card("Л л", "El, L", "", ""),
+    new Card("М м", "Em, M", "", ""),
+    new Card("Н н", "Ne, N", "", ""),
+    new Card("О о", "O", "", ""),
+    new Card("П п", "Pe, P", "", ""),
+    new Card("Р р", "Er, R", "", ""),
+    new Card("С с", "Es, S", "", ""),
+    new Card("Т т", "Te, T", "", ""),
+    new Card("У у", "U", "", ""),
+    new Card("Ф ф", "Ef, F", "", ""),
+    new Card("Х х", "Kha", "", ""),
+    new Card("Ц ц", "Tse", "", ""),
+    new Card("Ч ч", "Che", "", ""),
+    new Card("Ш ш", "Sha", "", ""),
+    new Card("Щ щ", "Shta", "", ""),
+    new Card("Ь ь", "Yer, J", "", ""),
+    new Card("Э э", "E", "", ""),
+    new Card("Ю ю", "Ju, Yu", "", ""),
+    new Card("Я я", "Ja, Ya", "", ""),
+  ]
+
   constructor() { }
 
-  getCards(): Card[] {
-    return this.cards;
+  getCards(alphabet: string): Card[] {
+    switch(alphabet) {
+      case 'Thai':
+        return this.thaiAlphabet;
+      case 'Arabic':
+        return this.arabicAlphabet;
+      case 'Cyrillic':
+        return this.cyrillicAlphabet;
+      default:
+        return [];
+    }
   }
 }

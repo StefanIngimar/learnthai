@@ -1,3 +1,4 @@
+<body class="bg-light">
 <div class="container mt-3">
   <h1 class="text-center mb-4">Flashcards</h1>
   <div class="dropdown mb-4">
@@ -5,27 +6,25 @@
       Choose Alphabet
     </button>
     <ul class="dropdown-menu" aria-labelledby="alphabetDropdown">
-      <li><a class="dropdown-item" href="#">Thai 1</a></li>
-      <li><a class="dropdown-item" href="#">Arabic 2</a></li>
-      <li><a class="dropdown-item" href="#">Cyrillic 3</a></li>
+      <li><a class="dropdown-item" href="#" (click)="onAlphabetChange('Thai')">Thai</a></li>
+      <li><a class="dropdown-item" href="#" (click)="onAlphabetChange('Arabic')">Arabic</a></li>
+      <li><a class="dropdown-item" href="#" (click)="onAlphabetChange('Cyrillic')">Cyrillic</a></li>
     </ul>
   </div>
   <div class="row">
     <div class="col-12 col-sm-6 col-md-3 mb-4" *ngFor="let card of cards; let i = index">
-      <div class="flip-card" (click)="toggleFlip(i)">
-        <div class="flip-card-inner" [class.flip]="flipState[i]">
+      <div class="flip-card">
+        <div class="flip-card-inner">
           <div class="flip-card-front text-white bg-primary">
-            
             <div class="card-body">
-              <h2 class="card-header">{{ card.thaiCharacter }}</h2>  
-              
+              <h2 class="card-header">{{ card.thaiCharacter }}</h2>
             </div>
           </div>
-          <div class="flip-card-back text-white bg-dark">
+          <div class="flip-card-back text-white">
             <div class="card-body">
-              <p class="card-text">{{ card.example }}</p>
+              <p class="card-text">{{ card.name }}</p>
               <p class="card-text">{{ card.phonetic }}</p>
-              <p class="card-title">{{ card.name }}</p>
+              <p class="card-title">{{ card.example }}</p>
             </div>
           </div>
         </div>

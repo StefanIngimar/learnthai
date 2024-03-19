@@ -13,16 +13,20 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   cards: Card[] = [];
-  flipState: boolean[] = [];
+  selectedAlphabet = 'Thai';
   
   constructor(private flashcardService: FlashcardService) {}
 
   ngOnInit() {
-      this.cards = this.flashcardService.getCards();
-      this.flipState = new Array(this.cards.length).fill(false);
+    this.loadCards();
   }
 
-  toggleFlip(index: number) {
-    this.flipState[index] = !this.flipState[index];
+  loadCards() {
+    this.cards = this.flashcardService.getCards(this.selectedAlphabet);
+  }
+
+  onAlphabetChange(alphabet: string) {
+    this.selectedAlphabet = alphabet;
+    this.loadCards();
   }
 }
