@@ -6,7 +6,7 @@ import { Card } from './Card';
   providedIn: 'root'
 })
 export class FlashcardService {
-  private thaiAlphabet: Card[] = [
+  /*thaiAlphabet: Card[] = [
     new Card("ก", "ko kai", "k", "ก ไก่ (ko kai) – chicken", "Thai"),
     new Card("ข", "kho khai", "kh", "ข ไข่ (kho khai) – egg", "Thai"),
     new Card("ฃ", "kho khuat", "kh", "ฃ ขวด (kho khuat) – bottle", "Thai"),
@@ -53,7 +53,7 @@ export class FlashcardService {
     new Card("ฮ", "ho nok huk", "h", "ฮ นกฮูก (ho nok huk) – owl", "Thai"),
   ];
 
-  private arabicAlphabet: Card[] = [
+  arabicAlphabet: Card[] = [
     new Card("ا", "alif", "a", "", "Arabic"),
     new Card("ب", "baa", "b", "", "Arabic"),
     new Card("ت", "taa", "t", "", "Arabic"),
@@ -84,7 +84,7 @@ export class FlashcardService {
     new Card("ي", "yaa", "y/ee as in meet", "", "Arabic"),
   ];
 
-  private cyrillicAlphabet: Card[] = [
+  cyrillicAlphabet: Card[] = [
     new Card("А а", "A", "", "", "Cyrillic"),
     new Card("Б б", "B", "", "", "Cyrillic"),
     new Card("В в", "Ve", "", "", "Cyrillic"),
@@ -127,5 +127,5 @@ export class FlashcardService {
       case 'Cyrillic': return this.cyrillicAlphabet;
       default: return [];
     }
-  }
+  }*/
 }
