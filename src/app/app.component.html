@@ -1,16 +1,6 @@
 <body class="bg-light">
 <div class="container mt-3">
   <h1 class="text-center mb-4">Flashcards</h1>
-  <div class="dropdown mb-4">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="alphabetDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-      Choose Alphabet
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="alphabetDropdown">
-      <li><a class="dropdown-item" href="#" (click)="onAlphabetChange('Thai'); $event.preventDefault()">Thai</a></li>
-      <li><a class="dropdown-item" href="#" (click)="onAlphabetChange('Arabic'); $event.preventDefault()">Arabic</a></li>
-      <li><a class="dropdown-item" href="#" (click)="onAlphabetChange('Cyrillic'); $event.preventDefault()">Cyrillic</a></li>
-    </ul>
-  </div>
   <div class="row">
     <div class="col-12 col-sm-6 col-md-3 mb-4" *ngFor="let card of cards; let i = index">
       <div class="flip-card">

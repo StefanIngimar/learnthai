@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { Card } from './Card';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FlashcardService {
-  /*thaiAlphabet: Card[] = [
+  cards: Card[] = [
     new Card("ก", "ko kai", "k", "ก ไก่ (ko kai) – chicken", "Thai"),
     new Card("ข", "kho khai", "kh", "ข ไข่ (kho khai) – egg", "Thai"),
     new Card("ฃ", "kho khuat", "kh", "ฃ ขวด (kho khuat) – bottle", "Thai"),
@@ -53,79 +52,9 @@ export class FlashcardService {
     new Card("ฮ", "ho nok huk", "h", "ฮ นกฮูก (ho nok huk) – owl", "Thai"),
   ];
 
-  arabicAlphabet: Card[] = [
-    new Card("ا", "alif", "a", "", "Arabic"),
-    new Card("ب", "baa", "b", "", "Arabic"),
-    new Card("ت", "taa", "t", "", "Arabic"),
-    new Card("ث", "thaa", "th", "", "Arabic"),
-    new Card("ج", "jiim", "j/zh", "", "Arabic"),
-    new Card("ح", "haa", "soft h", "", "Arabic"),
-    new Card("خ", "khaa", "kh", "", "Arabic"),
-    new Card("د", "dal", "d", "", "Arabic"),
-    new Card("ذ", "dhal", "hard th", "", "Arabic"),
-    new Card("ر", "raa", "r", "", "Arabic"),
-    new Card("ز", "zay", "z", "", "Arabic"),
-    new Card("س", "siin", "s", "", "Arabic"),
-    new Card("ش", "sheen", "sh", "", "Arabic"),
-    new Card("ص", "saad", "ss", "", "Arabic"),
-    new Card("ض", "dhad", "soft d", "", "Arabic"),
-    new Card("ط", "taa", "t", "", "Arabic"),
-    new Card("ظ", "dhaa", "th", "", "Arabic"),
-    new Card("ع", "hain", "h", "", "Arabic"),
-    new Card("غ", "ghain", "gh", "", "Arabic"),
-    new Card("ف", "faa", "f", "", "Arabic"),
-    new Card("ق", "qaaf", "saying q but back from the throat", "", "Arabic"),
-    new Card("ك", "kaaf", "k", "", "Arabic"),
-    new Card("ل", "laam", "l", "", "Arabic"),
-    new Card("م", "miim", "m", "", "Arabic"),
-    new Card("ن", "nun", "n", "", "Arabic"),
-    new Card("ه", "haa", "h", "", "Arabic"),
-    new Card("و", "waw", "w/oo as in boot", "", "Arabic"),
-    new Card("ي", "yaa", "y/ee as in meet", "", "Arabic"),
-  ];
-
-  cyrillicAlphabet: Card[] = [
-    new Card("А а", "A", "", "", "Cyrillic"),
-    new Card("Б б", "B", "", "", "Cyrillic"),
-    new Card("В в", "Ve", "", "", "Cyrillic"),
-    new Card("Г г", "Ge", "", "", "Cyrillic"),
-    new Card("Д д", "De", "", "", "Cyrillic"),
-    new Card("Е е", "E, Je, Ye", "", "", "Cyrillic"),
-    new Card("Ë ë", "Jo, Yo", "", "", "Cyrillic"),
-    new Card("Ж ж", "Zhe", "", "", "Cyrillic"),
-    new Card("З з", "Ze", "", "", "Cyrillic"),
-    new Card("И и", "I", "", "", "Cyrillic"),
-    new Card("Й й", "J", "", "", "Cyrillic"),
-    new Card("К к", "Ka", "", "", "Cyrillic"),
-    new Card("Л л", "El, L", "", "", "Cyrillic"),
-    new Card("М м", "Em, M", "", "", "Cyrillic"),
-    new Card("Н н", "Ne, N", "", "", "Cyrillic"),
-    new Card("О о", "O", "", "", "Cyrillic"),
-    new Card("П п", "Pe, P", "", "", "Cyrillic"),
-    new Card("Р р", "Er, R", "", "", "Cyrillic"),
-    new Card("С с", "Es, S", "", "", "Cyrillic"),
-    new Card("Т т", "Te, T", "", "", "Cyrillic"),
-    new Card("У у", "U", "", "", "Cyrillic"),
-    new Card("Ф ф", "Ef, F", "", "", "Cyrillic"),
-    new Card("Х х", "Kha", "", "", "Cyrillic"),
-    new Card("Ц ц", "Tse", "", "", "Cyrillic"),
-    new Card("Ч ч", "Che", "", "", "Cyrillic"),
-    new Card("Ш ш", "Sha", "", "", "Cyrillic"),
-    new Card("Щ щ", "Shta", "", "", "Cyrillic"),
-    new Card("Ь ь", "Yer, J", "", "", "Cyrillic"),
-    new Card("Э э", "E", "", "", "Cyrillic"),
-    new Card("Ю ю", "Ju, Yu", "", "", "Cyrillic"),
-    new Card("Я я", "Ja, Ya", "", "", "Cyrillic"),
-  ]
-
   constructor() { }
 
-  getCards(alphabet: string): Card[] {
-    switch(alphabet) {
-      case 'Thai': return this.thaiAlphabet;
-      case 'Arabic': return this.arabicAlphabet;
-      case 'Cyrillic': return this.cyrillicAlphabet;
-      default: return [];
-    }
-  }*/
+  getCards(): Card[] {
+    return this.cards;
+  }
 }
