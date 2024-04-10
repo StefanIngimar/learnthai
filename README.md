@@ -1,3 +1,5 @@
+This is a small webapp that I created since I wanted to try to use Angular. The frontend is done with Bootstrap. The webapp contains flashcards with the consonants in the Thai alphabet.
+
 # Thaiapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
